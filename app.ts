@@ -1,15 +1,27 @@
-function add(n1: number, n2: number) { // added type assignment, both parameters should be number. other types not allowed
+function add(n1: number, n2: number, showResult: boolean, phrase: string) { // added type assignment, both parameters should be number. other types not allowed
     console.log(typeof(n1)) // typeof lets you know the type of variable
 
-    if (typeof(n1) !== 'number' || typeof(n2) !== 'number') { // non typescript way to not run it if they are not numbers
-        throw new Error ("incorrect input")
+    // if (typeof(n1) !== 'number' || typeof(n2) !== 'number') { // non typescript way to not run it if they are not numbers
+    //     throw new Error ("incorrect input")
+    // }
+
+    const result = n1+n2 // will keep result as a number
+
+    if (showResult){
+        console.log(phrase + result)
+    } else {
+        return result
     }
-    return n1 + n2
+    
 }
 
 const number1 = 5
 const number2 = 2.8
+const printResult = true
+const resultPhrase = "result is: "
 
-const result = add(number1, number2)
+add(number1, number2, printResult, resultPhrase)
 
-console.log(result)
+// const result = add(number1, number2, printResult)
+
+// console.log(result)
