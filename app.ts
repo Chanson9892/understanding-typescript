@@ -1,14 +1,18 @@
 // const person: {
 //     name: string, // explicitly tell the types
 //     age: number
+//     hobbies: string[]
+//     role: [number, string]
 // } = { // TS specialized object type where we provide some info about structure of object, doesn't create new JS object
 
 const person = { // Infers type is better
     name: "Chandler",
     age: 23,
-    hobbies: ['sports', 'video games']
+    hobbies: ['sports', 'video games'],
+    role: [2, 'author'] // tuple example, for this example, identifiers are number or string
 
 }
+
 
 let favoriteActivities: string[] // lets them know its an array of strings
 favoriteActivities = ['sports']
