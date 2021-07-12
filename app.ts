@@ -13,3 +13,11 @@ let combineValues: (a: number, b:number) => number;
 combineValues = add;
 console.log(combineValues(8,8))
 
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) { // have void so it doesn't really care about the return type.
+    const result = n1 + n2
+    cb(result)
+}
+
+addAndHandle(10, 20, (result) => { //result will be a number due to the call back looking for a number
+    console.log(result)
+})
