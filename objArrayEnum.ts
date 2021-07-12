@@ -17,7 +17,9 @@ const person = { // Infers type is better
 let favoriteActivities: string[] // lets them know its an array of strings
 favoriteActivities = ['sports']
 
+
 // let favoriteActivities: any[] // create an array with strings and numbers and whatever else
+// favoriteActivities = ['sports', true]
 
 console.log(person.name)
 
