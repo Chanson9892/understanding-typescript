@@ -7,3 +7,9 @@ userInput = 'Max'
 if(typeof userInput === 'string'){
     userName = userInput
 }
+
+function generateError(message: string, code: number){ // returns nothing. never does not return a return value.
+    throw {message: message, errorCode: code}
+}
+
+generateError('error occurred', 500)
