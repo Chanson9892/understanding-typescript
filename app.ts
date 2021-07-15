@@ -1,3 +1,5 @@
-const fruit = "grape"
+const button = document.querySelector('button')! // need exclamation mark to let TS know there is a button
 
-console.log(fruit)
+button.addEventListener('click', () => {
+    console.log('Clicked')
+})
